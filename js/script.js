@@ -1,13 +1,22 @@
-console.log("Hi Hi Hello!");
+{
+    const welcome = () => {
+        console.log("Hi Hi Hello!");
+    }
 
-let button = document.querySelector(".button");
-let body = document.querySelector(".body");
+    let onChangeBackgroundClick = () => {
+        body.classList.toggle("dark");
 
-button.addEventListener("click", () => {
-    body.classList.toggle("dark");
+        button.innerText =
+            body.classList.contains("dark")
+                ? "Jasny motyw"
+                : "Ciemny motyw";
+    }
 
-    button.innerText =
-        body.classList.contains("dark")
-            ? "Jasny motyw"
-            : "Ciemny motyw";
-});
+    welcome();
+
+    let button = document.querySelector(".button");
+    let body = document.querySelector(".body");
+
+    button.addEventListener("click", onChangeBackgroundClick);
+
+}
