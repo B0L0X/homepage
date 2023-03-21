@@ -18,5 +18,4 @@
     let body = document.querySelector(".body");
 
     button.addEventListener("click", onChangeBackgroundClick);
-
 }
